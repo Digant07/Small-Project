@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+void main()
+{
+  int a1,b1,b1_orig,c1,x;
+  int a2,b2,c2,y;
+  printf("enter the first eq ");
+  scanf("%d",&a1);
+  scanf("%d",&b1);
+  scanf("%d",&c1);
+  printf("enter the second eq ");
+  scanf("%d",&a2);
+  scanf("%d",&b2);
+  scanf("%d",&c2);
+  b1_orig=b1;
+  a1*=b2;b1*=b2;c1*=b2;
+  a2*=b1_orig;b2=b1;c2*=b1_orig;
+  a1-=a2;c1-=c2;
+  x=c1/a1;
+  a2*=x;
+  y=(c2-a2)/b2;
+  printf("%d %d\n",x,y);
+}
+  
+  
+  
