@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+void main() 
+{
+    int curr,pre,i,ppre,n,count=0;
+    printf("enter the n ");
+    scanf("%d",&n);
+    for(i=0;i<n;i=i+1)
+    {
+        printf("enter the curr ");
+        scanf("%d",&curr); 
+        if(curr<0){
+            continue;
+        }
+        if(count==0){
+            ppre=curr;
+            count=1;
+        }
+        if(count==1){
+            pre=curr;
+            count=2;
+        }
+        else{
+            if(ppre*ppre+pre*pre==curr*curr)
+            {
+                printf("The pythagorean triples is %d %d %d ",ppre,pre,curr);
+                break;
+            }
+            ppre=pre;
+            pre=curr;
+        }
+        
+
+        
+        
+    }
+
+}
